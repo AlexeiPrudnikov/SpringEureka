@@ -4,6 +4,7 @@ import com.github.javafaker.Faker;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import ru.geekbrains.annotation.Timer;
 import ru.geekbrains.models.Author;
 import ru.geekbrains.models.Book;
 
@@ -13,6 +14,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/books")
+@Timer
 public class BookController {
     private final Faker faker;
     private final List<Book> books;

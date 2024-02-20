@@ -4,6 +4,7 @@ import com.github.javafaker.Faker;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import ru.geekbrains.annotation.Timer;
 import ru.geekbrains.models.Issue;
 
 import java.time.ZoneId;
@@ -11,6 +12,7 @@ import java.util.*;
 
 @RestController
 @RequestMapping("/issues")
+@Timer
 public class IssueController {
     private final ReaderProvider readerProvider;
     private final BookProvider bookProvider;
